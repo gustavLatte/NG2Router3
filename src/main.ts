@@ -17,8 +17,8 @@ bootstrap(Ng2router3AppComponent, provideRouter([
   { path: '/location', component: LocationListComponent, children: [
     { path: '/:locId', component: LocationDetailsComponent },
     { path: '/:locId/trainings', component: LocationTrainingsComponent },
-    { path: '/:locId/training/:trainingId', component: TrainingDetailsComponent }
-    //{ path: '/:locId/training/:trainingId', component: TrainingDetailsComponent, outlet: 'aux' } //http://localhost:4200/location/2/trainings(aux:/training/2)
+    //{ path: '/:locId/training/:trainingId', component: TrainingDetailsComponent }
+    { path: 'training/:trainingId', component: TrainingDetailsComponent, outlet: 'aux' } //http://localhost:4200/location/2(aux:/training/2)
   ] },
 ]));
 

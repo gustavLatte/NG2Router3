@@ -15,7 +15,7 @@ export class TrainingDetailsComponent implements OnInit {
   trainingId: Observable<string>;
 
   constructor(private activatedRoute: ActivatedRoute) {
-    this.locId = activatedRoute.params.map(r=> r['locId']);
+    this.locId = activatedRoute.params.map(r => r['locId']);
     this.trainingId = activatedRoute.params.map(r => r['trainingId']);
   }
 
