@@ -13,12 +13,13 @@ if (environment.production) {
 }
 
 bootstrap(Ng2router3AppComponent, provideRouter([
-  { path: '/login', component: LoginComponent, index: true },
-  { path: '/location', component: LocationListComponent, children: [
-    { path: '/:locId', component: LocationDetailsComponent },
-    { path: '/:locId/trainings', component: LocationTrainingsComponent },
-    //{ path: '/:locId/training/:trainingId', component: TrainingDetailsComponent }
-    { path: 'training/:trainingId', component: TrainingDetailsComponent, outlet: 'aux' } //http://localhost:4200/location/2(aux:/training/2)
+  { path: 'login', component: LoginComponent },
+  { path: 'location', component: LocationListComponent, children: [
+    { path: '', component: LocationDetailsComponent },
+    { path: ':locId', component: LocationDetailsComponent },
+    { path: ':locId/trainings', component: LocationTrainingsComponent },
+    { path: ':locId/training/:trainingId', component: TrainingDetailsComponent }
+    //{ path: 'training/:trainingId', component: TrainingDetailsComponent, outlet: 'aux' } //http://localhost:4200/location/2(aux:/training/2)
   ] },
 ]));
 
